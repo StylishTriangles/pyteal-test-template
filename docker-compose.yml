@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  algorand-node:
+    image: algorand-devnet
+    container_name: algorand-devnet-node
+    build: 
+      context: ./devnet
+    restart: unless-stopped
+    environment:
+      ALGORAND_DATA: /root/node/devnet/primary
+    ports:
+      - 8977:8977
+    command: /root/node/run.sh
+    networks:
+      - default
+  
+  test: # the image running python with pytest
+    image: python-test
+    build:
+      context: ./
+    environment: 
+      DEVNET_ADDRESS: http://algorand-devnet-node:8977  # defined above
+    networks:
+      - default
+    depends_on: 
+      - algorand-node
+
+networks:
+  default:
+    name: "devnet-pytest"

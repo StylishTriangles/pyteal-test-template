@@ -1,0 +1,38 @@
+{
+  "alloc": [
+    {
+      "addr": "7777777777777777777777777777777777777777777777777774MSJUVU",
+      "comment": "RewardsPool",
+      "state": {
+        "algo": 125000000000000,
+        "onl": 2
+      }
+    },
+    {
+      "addr": "A7NMWS3NT3IUDMLVO26ULGXGIIOUQ3ND2TXSER6EBGRZNOBOUIQXHIBGDE",
+      "comment": "FeeSink",
+      "state": {
+        "algo": 100000,
+        "onl": 2
+      }
+    },
+    {
+      "addr": "DW3FVR7PRSTUTOAUHJHQKX6ZKOZ5FGAHEBQMIMJA4SJYDX6452AZN7AOAE",
+      "comment": "Wallet1",
+      "state": {
+        "algo": 10000000000000000,
+        "onl": 1,
+        "sel": "p+1OUpXRZV2uYe+4cbe+iugN/BkjaHCBCAxaVMzHKxM=",
+        "vote": "UJV+K/+r4ajvHSQgSue+q0NIlIb/kQQn1RXzLuaMmII=",
+        "voteKD": 10000,
+        "voteLst": 3000000
+      }
+    }
+  ],
+  "devmode": true,
+  "fees": "A7NMWS3NT3IUDMLVO26ULGXGIIOUQ3ND2TXSER6EBGRZNOBOUIQXHIBGDE",
+  "id": "v1",
+  "network": "devnet",
+  "proto": "future",
+  "rwd": "7777777777777777777777777777777777777777777777777774MSJUVU"
+}
