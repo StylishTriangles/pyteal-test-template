@@ -3,7 +3,7 @@
 	"Archival": true,
 	"GossipFanout": 0,
     "EnableDeveloperAPI": true,
-	"NetAddress": "0.0.0:8977",
+	"NetAddress": "0.0.0.0:8977",
 	"DNSBootstrapID": "",
 	"EnableProfiler": true
 }
