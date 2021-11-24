@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.5'
 
 services:
   algorand-node:
@@ -13,7 +13,7 @@ services:
       - 8977:8977
     command: /root/node/run.sh
     networks:
-      - default
+      - devnet_template
   
   test: # the image running python with pytest
     image: python-test
@@ -22,10 +22,10 @@ services:
     environment: 
       DEVNET_ADDRESS: http://algorand-devnet-node:8977  # defined above
     networks:
-      - default
+      - devnet_template
     depends_on: 
       - algorand-node
 
 networks:
-  default:
-    name: "devnet-pytest"
+  devnet_template:
+    name: "devnet_template"

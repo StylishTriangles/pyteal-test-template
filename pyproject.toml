@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pyteal-test-template"
+version = "1.0.0"
+description = "Template for PyTEAL testing with Docker"
+authors = ["Łukasz Ptak <lukasz@ulam.io>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+py-algorand-sdk = "^1.8.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.11b1"
+pytest = "^6.2.5"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
