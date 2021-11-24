@@ -18,22 +18,13 @@ class Account:
         self.private_key = private_key
         self.address = addr
 
-def sp_zero_fee(sp: SuggestedParams) -> SuggestedParams:
+def sp_set_fee(sp: SuggestedParams, fee: int) -> SuggestedParams:
     """
-    Copy suggested params and use 0 fees
-    """
-    sp = copy(sp)
-    sp.flat_fee = True
-    sp.fee = 0
-    return sp
-
-def sp_large_fee(sp: SuggestedParams) -> SuggestedParams:
-    """
-    Copy suggested params and return suggested params with fee that could pay for 16 txns
+    Copy suggested params and return suggested params with fee set to the given value
     """
     sp = copy(sp)
     sp.flat_fee = True
-    sp.fee = 16000
+    sp.fee = fee
     return sp
 
 def now() -> int:
